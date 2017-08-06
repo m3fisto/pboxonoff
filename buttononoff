@@ -1,0 +1,12 @@
+#!/bin/bash
+pin=9
+gpio mode $pin in
+gpio mode $pin up
+while true; do
+ var=$(gpio read $pin)
+ if [ "$var" -eq "0" ] ; then
+  echo shutdown
+  sudo shutdown -h now
+ fi
+sleep 0.1
+done
