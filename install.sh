@@ -1,5 +1,3 @@
-sudo rm /etc/resolv.conf
-sudo sh -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf '
 sudo pacman -S wiringpi
 cd
 makedir pboxbut
